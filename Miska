@@ -1,0 +1,19 @@
+public class Miska {
+    private int foodAmount;
+
+    public Miska(int initialFood) {
+        this.foodAmount = initialFood;
+    }
+
+    public boolean decreaseFood(int amount) {
+        if (foodAmount >= amount) {
+            foodAmount -= amount;
+            return true;
+        }
+        return false;
+    }
+
+    public int getFoodAmount() {
+        return foodAmount;
+    }
+}
