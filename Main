@@ -1,0 +1,25 @@
+public class Main {
+    public static void main(String[] args) {
+        // Создаем животных
+        Cat cat1 = new Cat("Барсик");
+        Dog dog1 = new Dog("Шарик");
+
+        // Проверяем действия
+        cat1.run(150);  // Успешно
+        cat1.run(250);  // Не смог
+        cat1.swim(5);   // Не умеет
+
+        dog1.run(600);  // Не смог
+        dog1.swim(5);   // Успешно
+
+        // Работа с миской
+        Miska miska = new Miska(30);
+        cat1.eat(miska, 20);  // Успешно
+        cat1.eat(miska, 15);  // Недостаточно
+
+        // Выводим статистику
+        System.out.println("\nВсего животных: " + Animal.getAnimalCount());
+        System.out.println("Кошек: " + Cat.getCatCount());
+        System.out.println("Собак: " + Dog.getDogCount());
+    }
+}
